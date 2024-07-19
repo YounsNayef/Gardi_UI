@@ -183,7 +183,7 @@ export async function BuyProduct(formData: FormData) {
     cancel_url:
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/payment/cancel"
-        : "https://marshal-ui-yt.vercel.app/payment/cancel",
+        : "http://localhost:3000/payment/cancel",
   });
 
   return redirect(session.url as string);
@@ -216,7 +216,7 @@ export async function CreateStripeAccoutnLink() {
     return_url:
       process.env.NODE_ENV === "development"
         ? `http://localhost:3000/return/${data?.connectedAccountId}`
-        : `https://marshal-ui-yt.vercel.app/return/${data?.connectedAccountId}`,
+        : `http://localhost:3000/return/${data?.connectedAccountId}`,
     type: "account_onboarding",
   });
 
