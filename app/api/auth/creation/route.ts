@@ -51,6 +51,6 @@ export async function GET() {
   return NextResponse.redirect(
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://marshal-ui-yt.vercel.app/"
+      : "http://localhost:3000/"
   );
 }
